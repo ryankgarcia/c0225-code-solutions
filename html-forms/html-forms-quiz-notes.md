@@ -11,7 +11,7 @@ Answer the following questions in the provided markdown file before turning in t
 - Give three examples of `type` attribute values for HTML `<input>` elements.
   text, email, password
 - Is an HTML `<input>` element a block element or an inline element?
-  both. they are inline-block elements which means that they will sit inline with other elements but we can also control their height and width
+  inline-block element which means that they will sit inline with other elements but we can also control their height and width
 
 ## Notes
 
