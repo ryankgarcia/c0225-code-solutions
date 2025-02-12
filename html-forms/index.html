@@ -9,14 +9,16 @@
     <h1>Coding Form!</h1>
     <form>
       <div>
-      <label for="email-address">Email:</label>
+      <label for="email-address">Email</label>
       </div>
       <div>
       <input type="text" id="email" name="email" required />
       </div>
       <p>
-        <label for="Why is coding cool">Why is coding cool?</label>
-        <select id="Why is coding cool" name="Select">
+        <div>
+        <label for="Why-coding?">Why is coding cool?</label>
+        </div>
+        <select id="Why-coding?" name="Select">
         <option value="">Please select</option>
         <option value="Because it's interesting">
           Because it's interesting
@@ -42,7 +44,16 @@
         <label>Would you like to sign up for more information?</label>
       </p>
       <p>
-        <label>Comments</label>
+        <div>
+        <input type="checkbox" name="interest" value="checkbox" />
+        <label>Sign me up!</label>
+        </div>
+      </p>
+      <p>
+        <div>
+        <label for="comments">Comments</label>
+        </div>
+        <textarea id="comments" name="comments" cols='40' rows="10"></textarea>
       </p>
       <button>Submit</button>
     </form>
