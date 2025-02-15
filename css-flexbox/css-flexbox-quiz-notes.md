@@ -17,6 +17,15 @@ Answer the following questions in the provided markdown file before turning in t
 
 All student notes should be written here.
 
+---
+
+justify-content and align-items properties can alternate depending on how you set your flex-direction.
+by changing it to flex-direction: column ... then the axis' switch. which is why justify-content is referred to on the main axis, and align-items is on the cross axis. they don't always stay on horizontal (justify-content) and vertical (align-items) axis.
+
+think of every web page as rows and columns. for every row, you can separate columns among that row.
+
+---
+
 How to write `Code Examples` in markdown
 
 for JS:
