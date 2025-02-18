@@ -8,7 +8,6 @@ Answer the following questions in the provided markdown file before turning in t
   to get context of the things we are working with.
 - What is the purpose of events and event handling?
   event handlers respond to user actions or interactions with a web page. an event object contains information about the event. this event object is passed as an argument to the event handler function.
-
 - Are all possible parameters required to use a JavaScript method or function?
   they are not always required
 - What method of element objects lets you set up a function to be called when a specific type of event occurs?
