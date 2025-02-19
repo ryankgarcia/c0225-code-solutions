@@ -6,14 +6,6 @@ console.log('5 minutes to seconds:', convertMinutesToSeconds(5));
 console.log('500 minutes to seconds:', convertMinutesToSeconds(500));
 console.log('15000 minutes to seconds:', convertMinutesToSeconds(15000));
 
-function convertHoursToMinutes(hours: number): number {
-  const minutes: number = hours / 60;
-  return minutes;
-}
-console.log('4 minutes to hours', convertHoursToMinutes(4));
-console.log('60 minutes to hours', convertHoursToMinutes(60));
-console.log('400 minutes to hours', convertHoursToMinutes(400));
-
 function greet(name: string): string {
   const greeting: string = 'Hello,' + name + ',how are you doing today?';
   return greeting;
@@ -22,15 +14,6 @@ console.log('greeting person 1:', greet('Margret Villa'));
 console.log('greeting person 2:', greet('Joseph Timberlake'));
 console.log('greeting person 3:', greet('Jared Hunter'));
 console.log('greeting person 4:', greet('Rosa Lemoine'));
-
-function greet(name: string): string {
-  const greeting: string = 'Good morning,' + name + ',have a lovely day!';
-  return greeting;
-}
-console.log('greetings person 1:', greet('Jim'));
-console.log('greetings person 2:', greet('Timmy'));
-console.log('greetings person 3:', greet('Marc Anthony'));
-console.log('greetings person 4:', greet('Joey Marcus'));
 
 const getArea = (width: number, height: number): number => width * height;
 
@@ -44,45 +27,44 @@ interface Person {
   lastName: string;
 }
 
-const person = {
-  firstName: 'James';
-  lastName: 'Howard';
-}
+const person: Person = {
+  firstName: 'James',
+  lastName: 'Howard',
+};
 
-const getFirstName = (firstName: string, lastName: string): string => person.firstName;
+// the code for getFirstName, is one way of writing the function //
+const getFirstName = (person: Person): string => person.firstName;
 
 console.log('get first name:', getFirstName(person));
 
-//or written like this//
+// this console.log is another way of writing the arguments INSIDE the function call //
+console.log(
+  'get first name:',
+  getFirstName({ firstName: 'Shawn', lastName: 'Kost' })
+);
 
-const getLastName = (firstName: string, lastName: string): string => lastName;
+const bigCities: string[] = [
+  'Las Vegas',
+  'Tacoma',
+  'Naples',
+  'New York City',
+  'Jacksonville',
+];
 
-// console.log(getLastName({firstName: 'Jimmy', lastName: 'Farley'}));
-// console.log(getLastName({firstName: 'Tony', lastName: 'Villaloba'}));
-console.log('select last name:', getLastName('Jimmy','Farley'));
-console.log('select last name:', getLastName('Tony','Villaloba'));
+const getLastElement = (array: string[]): string => array[array.length - 1];
 
-//ask Shawn which is correct of the two..//
-
-const bigCities = ['Las Vegas', 'Tacoma', 'Naples', 'New York City', 'Jacksonville']
-
-const getLastElement = bigCities[bigCities.length -1];
-
-console.log('last city in array:', getLastElement)
-
-//ask again..// i got confused on how to do this one with arrays. i only know how to return arrays
-//by doing the .length property of the object
-
-const citiesBig = ['Las Vegas', 'Naples', 'New York City', 'Jacksonville', 'Tacoma']
-
-const lastElement: string[] =  => index[index-1];
-
-
-//the call other functions got me confused as well//
+console.log('last element in array:', getLastElement(bigCities));
+console.log('last element in array:', getLastElement(['3', '7', '9']));
 
 function callOtherFunction(otherFunction: Function, params: unknown): any {
-  const getFirstName = getFirstName();
-  return callOtherFunction;
+  return otherFunction(params);
 }
 
-console.log('returned other function:', callOtherFunction);
+console.log(
+  'returned other function:',
+  callOtherFunction(getFirstName, person)
+);
+console.log(
+  'returned other function:',
+  callOtherFunction(getLastElement, bigCities)
+);
