@@ -79,5 +79,9 @@ function renderPokemon(pokemon) {
     return $columnThird;
 }
 const $row = document.querySelector('.row');
-// if (!$row) throw new Error('The $row query failed');
-// for//
+if (!$row)
+    throw new Error('The $row query failed');
+for (let i = 0; i < pokedex.length; i++) {
+    const pokemon = renderPokemon(pokedex[i]);
+    $row.append(pokemon);
+}
