@@ -54,6 +54,8 @@ const bigCities: string[] = [
 const getLastElement = (array: string[]): string => array[array.length - 1];
 
 console.log('last element in array:', getLastElement(bigCities));
+
+// this console.log is showing the array being passed in as an argument //
 console.log('last element in array:', getLastElement(['3', '7', '9']));
 
 function callOtherFunction(otherFunction: Function, params: unknown): any {
