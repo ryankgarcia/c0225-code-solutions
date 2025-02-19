@@ -1,57 +1,88 @@
+function convertMinutesToSeconds(minutes: number): number {
+  const seconds: number = minutes * 60;
+  return seconds;
+}
+console.log('5 minutes to seconds:', convertMinutesToSeconds(5));
+console.log('500 minutes to seconds:', convertMinutesToSeconds(500));
+console.log('15000 minutes to seconds:', convertMinutesToSeconds(15000));
+
+function convertHoursToMinutes(hours: number): number {
+  const minutes: number = hours / 60;
+  return minutes;
+}
+console.log('4 minutes to hours', convertHoursToMinutes(4));
+console.log('60 minutes to hours', convertHoursToMinutes(60));
+console.log('400 minutes to hours', convertHoursToMinutes(400));
+
+function greet(name: string): string {
+  const greeting: string = 'Hello,' + name + ',how are you doing today?';
+  return greeting;
+}
+console.log('greeting person 1:', greet('Margret Villa'));
+console.log('greeting person 2:', greet('Joseph Timberlake'));
+console.log('greeting person 3:', greet('Jared Hunter'));
+console.log('greeting person 4:', greet('Rosa Lemoine'));
+
+function greet(name: string): string {
+  const greeting: string = 'Good morning,' + name + ',have a lovely day!';
+  return greeting;
+}
+console.log('greetings person 1:', greet('Jim'));
+console.log('greetings person 2:', greet('Timmy'));
+console.log('greetings person 3:', greet('Marc Anthony'));
+console.log('greetings person 4:', greet('Joey Marcus'));
+
+const getArea = (width: number, height: number): number => width * height;
+
+console.log('area of 5*12 =', getArea(5, 12));
+console.log('area of 5*5 =', getArea(5, 5));
+console.log('area of 12*12 =', getArea(12, 12));
+console.log('area of 500*510 =', getArea(500, 510));
+
 interface Person {
   firstName: string;
   lastName: string;
 }
 
-const person: Person = {
-  firstName: 'Ryan',
-  lastName: 'Garcia',
-};
-
-function convertMinutesToSeconds(minutes: number): number {
-  const seconds: number = minutes * 60;
-  return seconds;
-}
-console.log('minutes to seconds:', convertMinutesToSeconds(2));
-
-function greet(name: string): string {
-  const greeting: string = 'Hello' + ' ' + name + '!';
-  return greeting;
-}
-console.log('greeting output:', greet('Ryan'));
-
-const getArea = (width: number, height: number): number => {
-  return width * height;
-};
-console.log('area of rectangle:', getArea(12, 5));
-console.log('area of rectangle:', getArea(100, 5));
-
-const getFirstName = (person: Person): string => {
-  return person.firstName;
-};
-console.log('person first name:', getFirstName(person));
-
-const namesOfPeople: string[] = [
-  'Joseph',
-  'Robert',
-  'Sally',
-  'Tom',
-  'Joey',
-  'Michael',
-  'Tyler',
-];
-
-const getLastElement = (namesOfPeople: string[]): string => {
-  return namesOfPeople[namesOfPeople.length - 1];
-};
-
-console.log('last element in array:', getLastElement(namesOfPeople));
-
-function callOtherFunction(otherFunction: Function, params: unknown): unknown {
-  return otherFunction(params);
+const person = {
+  firstName: 'James';
+  lastName: 'Howard';
 }
 
-console.log(
-  'convert 5 Minutes To Seconds function:',
-  callOtherFunction(convertMinutesToSeconds, 5)
-);
+const getFirstName = (firstName: string, lastName: string): string => person.firstName;
+
+console.log('get first name:', getFirstName(person));
+
+//or written like this//
+
+const getLastName = (firstName: string, lastName: string): string => lastName;
+
+// console.log(getLastName({firstName: 'Jimmy', lastName: 'Farley'}));
+// console.log(getLastName({firstName: 'Tony', lastName: 'Villaloba'}));
+console.log('select last name:', getLastName('Jimmy','Farley'));
+console.log('select last name:', getLastName('Tony','Villaloba'));
+
+//ask Shawn which is correct of the two..//
+
+const bigCities = ['Las Vegas', 'Tacoma', 'Naples', 'New York City', 'Jacksonville']
+
+const getLastElement = bigCities[bigCities.length -1];
+
+console.log('last city in array:', getLastElement)
+
+//ask again..// i got confused on how to do this one with arrays. i only know how to return arrays
+//by doing the .length property of the object
+
+const citiesBig = ['Las Vegas', 'Naples', 'New York City', 'Jacksonville', 'Tacoma']
+
+const lastElement: string[] =  => index[index-1];
+
+
+//the call other functions got me confused as well//
+
+function callOtherFunction(otherFunction: Function, params: unknown): any {
+  const getFirstName = getFirstName();
+  return callOtherFunction;
+}
+
+console.log('returned other function:', callOtherFunction);
