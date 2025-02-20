@@ -85,4 +85,22 @@ console.log('sumArray test:', sumArray([3, 4, 5]));
 console.log('sumArray test:', sumArray([8, 12, 4]));
 console.log('sumArray test:', sumArray([13, 14, 15]));
 
-// left off on step 17 //
+// write this function again. recall the use of being able to write out strings using the //
+// Array.from() method and the .reverse() method which are built in global methods //
+
+function reverseString(str: string): string {
+  let reversed: string = '';
+  for (const char of Array.from(str).reverse()) {
+    reversed += char;
+  }
+  return reversed;
+}
+
+console.log('reversed string:', reverseString('nayR'));
+console.log('reversed string:', reverseString('retaW'));
+console.log('reversed string:', reverseString('miJ'));
+console.log('reversed string:', reverseString('syoB ehT'));
+console.log('reversed string:', reverseString('!ooooY'));
+console.log('reversed string:', reverseString('!!rentraP ydwoH'));
+
+// left off on step 19... //
