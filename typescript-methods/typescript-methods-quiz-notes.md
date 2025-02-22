@@ -17,11 +17,9 @@ Answer the following questions in the provided markdown file before turning in t
 - How do you generate a random number?
   using the Math method. it is Math.random()
 - How do you delete an element from an array?
-using the pop()
-<!-- shift() or splice() method -->
+  using the pop()
 - How do you append an element to an array?
-using the push() method
- <!-- unshift() or splice() method -->
+  using the push() method
 - How do you break a string up into an array?
   using the split() method, using a specified separator string to determine where to make each split
 - Do string methods change the original string? How would you check if you weren't sure?
