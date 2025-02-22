@@ -21,7 +21,7 @@ Answer the following questions in the provided markdown file before turning in t
 - Besides a `return` statement, which exits its entire function block, which keyword exits a loop before its **condition** expression evaluates to `false`?
   break statement
 - What does the `++` increment operator do?
-  it allows our loop to iterate through the data by 1.
+  it allows our loop to iterate by 1
 - How do you iterate through the keys of an object?
   by using a for..in loop
 
