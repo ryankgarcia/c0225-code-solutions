@@ -16,11 +16,10 @@ $todoForm.addEventListener('submit', (event: Event) => {
     isCompleted: false,
   };
   todos.push(todo);
+  writeTodos();
   $todoList.appendChild(renderTodo(todo));
   $todoForm.reset();
 });
-
-writeTodos();
 
 const $todoList = document.querySelector('#todo-list') as HTMLUListElement;
 
@@ -30,6 +29,7 @@ $todoList.addEventListener('change', (event: Event) => {
   for (let i = 0; i < todos.length; i++) {
     if (todos[i].todoId === todoId) {
       todos[i].isCompleted = $eventTarget.checked;
+      writeTodos();
       break;
     }
   }
@@ -39,8 +39,6 @@ for (let i = 0; i < todos.length; i++) {
   const $todo = renderTodo(todos[i]);
   $todoList.appendChild($todo);
 }
-
-writeTodos();
 
 function renderTodo(todo: Todo): HTMLLIElement {
   /**
