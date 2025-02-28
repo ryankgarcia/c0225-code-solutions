@@ -1,11 +1,20 @@
 const $tabContainer = document.querySelector('.tab-container');
-const $tabs = document.querySelectorAll('.tab');
-const $views = document.querySelectorAll('.view');
+const $tabElements = document.querySelector('.tab');
+const $view = document.querySelector('.view');
 
 if (!$tabContainer) throw new Error('$tabContainer query failed');
+if (!$tabElements) throw new Error('$tabElements query failed');
+if (!$view) throw new Error('$view query failed');
 
-// left off here in the code sequence //
-
-// $tabContainer.addEventListener('click', (event: Event) => {
-//   // const $eventTarget = event.target as HTMLDivElement; //left off here.
-// };
+$tabContainer.addEventListener('click', (event: Event): void => {
+  const $eventTarget = event.target as HTMLDivElement;
+  console.log('before loop', $eventTarget);
+  // debugger;
+  if ($eventTarget.matches('.tab.active')) {
+    console.log('this <div> has "tab"');
+    $tabElements.getAttribute('.tab.active');
+  } else {
+    console.log('this <div> does not have "tab"');
+    $tabElements.getAttribute('.view.hidden');
+  }
+});
