@@ -1,23 +1,35 @@
 "use strict";
 const $tabContainer = document.querySelector('.tab-container');
-const $tabElements = document.querySelector('.tab');
-const $view = document.querySelector('.view');
+const $tabs = document.querySelectorAll('.tab');
+const $view = document.querySelectorAll('.view');
 if (!$tabContainer)
     throw new Error('$tabContainer query failed');
-if (!$tabElements)
+if (!$tabs)
     throw new Error('$tabElements query failed');
 if (!$view)
     throw new Error('$view query failed');
 $tabContainer.addEventListener('click', (event) => {
     const $eventTarget = event.target;
-    console.log('before loop', $eventTarget);
-    // debugger;
-    if ($eventTarget.matches('.tab.active')) {
-        console.log('this <div> has "tab"');
-        $tabElements.getAttribute('.tab.active');
+    for (let tabIndex = 0; tabIndex < $tabs.length; tabIndex++) {
+        if ($tabs[tabIndex] === $eventTarget) {
+            // console.log($eventTarget); // was my event clicked? if it is, show it as tab active
+            $tabs[tabIndex].className = 'tab active';
+        }
+        else {
+            $tabs[tabIndex].className = 'tab';
+        }
     }
-    else {
-        console.log('this <div> does not have "tab"');
-        $tabElements.getAttribute('.view.hidden');
+    const targetTab = $eventTarget.dataset.view;
+    console.log(targetTab);
+    // first : .getAttribute('data-view')
+    // second: $targetView
+    // data-view can be iterated data-view++
+    for (let index = 0; index < $view.length; index++) {
+        if ($view === targetTab) {
+            $view.getAttribute('data-view');
+        }
+        else {
+            hidden;
+        }
     }
 });
