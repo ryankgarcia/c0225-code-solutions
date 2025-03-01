@@ -19,18 +19,12 @@ $tabContainer.addEventListener('click', (event: Event): void => {
   }
 
   const targetTab = $eventTarget.dataset.view;
-  console.log(targetTab);
-
-  // first : .getAttribute('data-view')
-  // second: $targetView
-
-  // data-view can be iterated data-view++
 
   for (let index = 0; index < $view.length; index++) {
-    if ($view === targetTab) {
-      $view.getAttribute('data-view');
+    if ($view.getAttribute('data-view') !== targetTab) {
+      $view.className = 'view hidden';
     } else {
-      hidden;
+      $view.className = 'view';
     }
   }
 });
