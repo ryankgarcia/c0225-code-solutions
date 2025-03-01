@@ -12,7 +12,6 @@ $tabContainer.addEventListener('click', (event) => {
     const $eventTarget = event.target;
     for (let tabIndex = 0; tabIndex < $tabs.length; tabIndex++) {
         if ($tabs[tabIndex] === $eventTarget) {
-            // console.log($eventTarget); // was my event clicked? if it is, show it as tab active
             $tabs[tabIndex].className = 'tab active';
         }
         else {
@@ -20,16 +19,12 @@ $tabContainer.addEventListener('click', (event) => {
         }
     }
     const targetTab = $eventTarget.dataset.view;
-    console.log(targetTab);
-    // first : .getAttribute('data-view')
-    // second: $targetView
-    // data-view can be iterated data-view++
     for (let index = 0; index < $view.length; index++) {
-        if ($view === targetTab) {
-            $view.getAttribute('data-view');
+        if ($view[index].getAttribute('data-view') !== targetTab) {
+            $view[index].className = 'view hidden';
         }
         else {
-            hidden;
+            $view[index].className = 'view';
         }
     }
 });
