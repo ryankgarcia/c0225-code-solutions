@@ -5,19 +5,19 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What is a client?
-  service requesters
+  a device, person, software that requests a service from a server
 - What is a server?
-  provider of a resource or service
+  a person or a machine, that provides service to a client
 - Which HTTP method does a browser issue to a web server when you visit a URL?
-  request-target
+  the GET method
 - What three things are on the start-line of an HTTP **request** message?
   method, request-target, protocol
 - What three things are on the start-line of an HTTP **response** message?
   protocol, status-code, status-text
 - What are HTTP headers?
-  metadata sent with a request after the start line and before the body
+  key-value pairs that provide data about the request
 - Where would you go if you wanted to learn more about a specific HTTP Header?
-  HTTPie
+  mdn
 - Is a body required for a valid HTTP request or response message?
   it is not always required
 
