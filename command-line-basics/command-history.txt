@@ -1,0 +1,500 @@
+   74  git commit -m "updated the html doc with divs for proper formatting."
+   75  git add .
+   76  git commit -m "updated the html doc with divs for proper css formatting."
+   77  git add .
+   78  git commit -m "work in progress with html and css styles." --no-verify
+   79  git switch main
+   80  clear
+   81  git switch dom-querying
+   82  git switch dom-querying
+   83  cd ..
+   84  /c0223-code-solutions
+   85  /c0225-code-solutions
+   86  cd c0225-code-solutions
+   87  git switch dom-querying
+   88  cd dom-querying/
+   89  npx tsc --watch
+   90  cd ..
+   91  git switch dom-events
+   92  git commit -m "practice dom-querying."
+   93  git add dom-querying
+   94  git status
+   95  git commit -m "practicing dom-querying."
+   96  git switch dom-events
+   97  cd dom-events
+   98  npx tsc --watcj
+   99  npx tsc --watch
+  100  git status
+  101  git add dom-events
+  102  cd ..
+  103  git status
+  104  git add dom-events
+  105  git status
+  106  git commit -m "reworked the exercise."
+  107  git switch main
+  108  git switch dom-manipulation
+  109  cd dom-manipulation
+  110  npx tsc --watch
+  111  cd ..
+  112  git status
+  113  git add dom-manipulation/
+  114  git status
+  115  git commit -m "reworked the solution."
+  116  git switch main
+  117  git branch --list
+  118  git switch issue-1-create-an-entry 
+  119  git status
+  120  git commit .
+  121  git commit .
+  122  git commit .
+  123  git commit .
+  124  git add .
+  125  git commit -m "updated css formatting. calling the photoURL from the DOM in typescript."
+  126  git add .
+  127  git commit -m "rewrote the addeventlistener for the 'input'".
+  128  npx tsc --watch
+  129  git add .
+  130  git commit -m "created a functioning event listener for the photo URL."
+  131  npx tsc --watch
+  132  git add .
+  133  git commit -m "creating a new function for submit button."
+  134  git statu
+  135  git status
+  136  git switch typescript-forms
+  137  cd typescript-forms
+  138  npx tsc --watch
+  139  cd ..
+  140  git status
+  141  git add typescript-forms
+  142  git status
+  143  git commit -m "Completed typescript-forms."
+  144  git push origin typescript-forms
+  145  git switch main
+  146  git pull origin main
+  147  git switch typescript-local-storage
+  148  git branch typescript-local-storage
+  149  git switch main
+  150  git switch typescript-local-storage
+  151  cd typescript-local-storage
+  152  npx tsc --watch
+  153  cd ..
+  154  git status
+  155  git add typescript-local-storage
+  156  git status
+  157  git commit -m "in progress." --no-verify
+  158  git switch main
+  159  git switch typescript-local-storage
+  160  cd typescript-local-storage
+  161  npx tsc --watch
+  162  cd ..
+  163  git status
+  164  git add typescript-local-storage
+  165  git status
+  166  git commit -m "Completed typescript-local-storage."
+  167  git push origin typescript-local-storage
+  168  git switch main
+  169  git commit -m "Completed typescript-local-storage."
+  170  git add typescript-local-storage/
+  171  git commit -m "Completed typescript-local-storage."
+  172  git push origin typescript-local-storage
+  173  git switch main
+  174  git switch typescript-local-storage 
+  175  cd typescript-local-storage/
+  176  npx tsc --watch
+  177  cd ..
+  178  git add typescript-local-storage/
+  179  git commit -m "Completed typescript-local-storage."
+  180  git push origin typescript-local-storage 
+  181  git switch main
+  182  npx tsc --watch
+  183  git status
+  184  git add .
+  185  git commit -m "added new object to beginning of the data model, assigned an entryId, prevent the page from refreshing, store form values."
+  186  npx tsc --watch
+  187  git add .
+  188  git commit "added serialization and created two functions."
+  189  git commit -m "added serialization and created two functions."
+  190  npx tsc --watch
+  191  git add .
+  192  git commit -m "tested the app by submitting new entries."
+  193  git add .
+  194  git commit -m "Checked for errors, tested functionality, deleted CSS classes that were not being used."
+  195  git push issue-1-create-an-entry
+  196  git switch main
+  197  git switch issue-1-create-an-entry 
+  198  git switch main
+  199  git pull origin main
+  200  git branch dom-event-delegation
+  201  git switch dom-event-delegation 
+  202  cd dom-event-delegation
+  203  npx tsc --watch
+  204  cd ..
+  205  git status
+  206  git add dom-event-delegation
+  207  git status
+  208  git commit -m "Completed dom-event-delegation."
+  209  git push origin dom-event-delegation 
+  210  git switch main
+  211  git pull origin main
+  212  git switch typescript-modal
+  213  cd typescript-modal
+  214  npx tsc --watch
+  215  cd ..
+  216  git status
+  217  git add typescript-modal
+  218  git status
+  219  git commit -m "Completed typescript-modal"
+  220  git push origin typescript-modal
+  221  git switch main
+  222  git switch issue-1-create-an-entry 
+  223  git push origin issue-1-create-an-entry 
+  224  git switch main
+  225  git pull origin main
+  226  git branch issue-2-view-entries
+  227  git switch issue-2-view-entries 
+  228  npx tsc --watch
+  229  git switch main
+  230  git pull origin main
+  231  git switch issue-2-view-entries 
+  232  npx tsc --watch
+  233  git add .
+  234  git commit -m "created an unordered list for dummy journal entries and tested the responsiveness on mobile and desktop."
+  235  git add .
+  236  git commit -m "created an unordered list for dummy journal entries and tested the responsiveness on mobile and desktop."
+  237  npx tsc --watch
+  238  git status
+  239  git add .
+  240  git commit -m "writing a renderEntry function to create a DOM tree.'
+  241  git add .
+  242  git status
+  243  git add .
+  244  git commit -m "creating a function to render entries and create a DOM tree."
+  245  git commit -m "creating a function to render entries and create a DOM tree." --no-verify
+  246  npx tsc --watch
+  247  git add .
+  248  git commit -m "completed the function definition for renderEntry."
+  249  git commit -m "completed the function definition for renderEntry." --no-verify
+  250  npx tsc --watch
+  251  git add .
+  252  git commit -m "created an event listener on the DOM and removed the HTML dummy entries."
+  253  npx tsc --watch
+  254  git add .
+  255  git commit -m "wrote no entries exit on a p element."
+  256  git switch main
+  257  git switch main
+  258  git pull origin main
+  259  git switch typescript-view-swapping
+  260  cd typescript-view-swapping
+  261  npx tsc --watch
+  262  cd ..
+  263  git status
+  264  git add typescript-view-swapping/
+  265  git status
+  266  git commit -m "in progress."
+  267  git switch main
+  268  cd ..
+  269  cd /workspaces
+  270  git clone git@github.com:frank-kang/week-planner.git
+  271  cd week-planner
+  272  npm install
+  273  npm install
+  274  git pull origin main
+  275  git pull origin main
+  276  git add .
+  277  git commit -m "made more dummy element rows, and updated CSS to show alternating gray colors."
+  278  git push origin main
+  279  git add .
+  280  git commit -m "updates before push to next person."
+  281  git push origin main
+  282  git pull origin main
+  283  git fetch --all
+  284  git reset --hard origin/main
+  285  npx tsc --watch
+  286  git add .
+  287  git commit -m "working on renderElements function"
+  288  git add .
+  289  git commit -m "working on renderElements function." -n
+  290  git push origin main
+  291  npx tsc --watch
+  292  git pull origin main
+  293  git fetch --all
+  294  git reset --hard origin main
+  295  git reset --hard origin/main
+  296  npx tsc --watch
+  297  git add .
+  298  git commit -m "working on not having duplicate entries." -n
+  299  git add .
+  300  git commit -m "removed dummy data, working on not having duplicate entries." -n
+  301  git push origin main --force
+  302  git switch typescript-view-swapping
+  303  cd typescript-view-swapping/
+  304  npx tsc --watch
+  305  npx tsc --watch
+  306  cd ..
+  307  git status
+  308  git add
+  309  git add typescript-view-swapping
+  310  git status
+  311  git commit -m "in progress working on the for loop statement". -n
+  312  git switch main
+  313  git status
+  314  git add typescript-view-swapping
+  315  git status
+  316  git commit -m "in progress. working on the for loop statement." --no-verify
+  317  git switch main
+  318  git switch typescript-view-swapping 
+  319  cd typescript-view-swapping
+  320  npx tsc --watch
+  321  cd ..
+  322  git status
+  323  git add typescript-view-swapping/
+  324  git status
+  325  git commit -m "Completed typescript-view-swapping."
+  326  git push origin typescript-view-swapping
+  327  git switch main
+  328  git switch main
+  329  git pull origin main
+  330  git branch typescript-loops-practice
+  331  git switch typescript-loops-practice 
+  332  git switch typescript-functions-practice 
+  333  git switch main
+  334  git pull origin main
+  335  git switch typescript-loops-practice
+  336  cd typescript-loops-practice
+  337  npx tsc --watch
+  338  cd ..
+  339  cd typescript-loops-practice/
+  340  npx tsc --watch
+  341  cd ..
+  342  git status
+  343  git add typescript-loops-practice
+  344  git status
+  345  git commit -m "saving over a never ending loop."
+  346  cd typescript-loops-practice
+  347  npx tsc --watch
+  348  cd ..
+  349  cd typescript-loops-practice
+  350  npx tsc --watch
+  351  cd ..
+  352  git status
+  353  git add typescript-loops-practice
+  354  git status
+  355  git commit -m "in progress."
+  356  cd typescript-loops-practice/
+  357  npx tsc --watch
+  358   cd ..
+  359  git status
+  360  git add typescript-loops-practice
+  361  git status
+  362  git commit -m "in progress."
+  363  cd typescript-loops-practice
+  364  npx tsc --watch
+  365  cd ..
+  366  git status
+  367  git add typescript-loops-practice
+  368  git status
+  369  git commit -m "in progress."
+  370  cd typescript-loops-practice/
+  371  npx tsc --watch
+  372  cd ..
+  373  git status
+  374  git add typescript-loops-practice/
+  375  git status
+  376  git commit -m "in progress."
+  377  git add typescript-loops-practice/
+  378  git commit -m "in progress."
+  379  cd typescript-loops-practice
+  380  npx tsc --watch
+  381  cd ..
+  382  git status
+  383  git add typescript-loops-practice
+  384  git status
+  385  git commit -m "in progress."
+  386  git switch main
+  387  git pull origin main
+  388  git branch practice-interview-challenge
+  389  git switch practice-interview-challenge
+  390  cd practice-interview-challenge
+  391  npx tsc --watch
+  392  cd ..
+  393  git status
+  394  git add practice-interview-challenge
+  395  git status
+  396  git commit -m "practice interview challenge in progress."
+  397  git push origin practice-interview-challenge 
+  398  git switch main
+  399  git pull origin main
+  400  git branch typescript-timers
+  401  git switch typescript-timers
+  402  cd typescript-timers
+  403  npx tsc --watch
+  404  cd ..
+  405  git switch practice-interview-challenge 
+  406  git switch typescript-timers
+  407  git add practice-interview-challenge/
+  408  git commit -m "in progress."
+  409  git switch typescript-timers
+  410  cd typescript-timers
+  411  npx tsc --watch
+  412  cd ..
+  413  git status
+  414  git add typescript-timers
+  415  git commit -m "in progress."
+  416  git switch main
+  417  git pull origin main
+  418  git branch typescript-carousel
+  419  git switch typescript-carousel
+  420  cd typescript-carousel
+  421  npx tsc --watch
+  422  cd ..
+  423  git status
+  424  git add typescript-carousel
+  425  git commit -m "in progress."
+  426  git add typescript-carousel
+  427  git commit -m "in progress."
+  428  git switch main
+  429  git add typescript-carousel
+  430  git commit -m 'in progress.'
+  431  git switch main
+  432  git pull origin main
+  433  git switch typescript-timer
+  434  git switch typescript-timers
+  435  cd typescript-timers
+  436  npx tsc --watch
+  437  cd ..
+  438  git status
+  439  git add typescript-timers
+  440  git commit -m "Completed typescript-timers."
+  441  git push origin typescript-timers
+  442  git switch main
+  443  git pull origin main
+  444  git switch typescript-timers
+  445  cd typescript-timers
+  446  npx tsc --watch
+  447  cd ..
+  448  git switch main
+  449  git switch typescript-timers
+  450  git push origin typescript-timers
+  451  git switch main
+  452  git pull origin main
+  453  git switch main
+  454  git pull origin main
+  455  git branch typescript-destructuring
+  456  git switch typescript-destructuring
+  457  cd typescriipt-destructuring
+  458  cd typescript-destructuring
+  459  npx tsc --watch
+  460  cd ..
+  461  git status
+  462  git add typescript-destructuring
+  463  git status
+  464  git commit -m "Completed typescript-destructuring."
+  465  git push origin typescript-destructuring
+  466  git switch main
+  467  git pull origin main
+  468  git branch typescript-operators
+  469  git switch typescript-operators
+  470  cd typescript-operators
+  471  npx tsc --watch
+  472  cd ..
+  473  git add typescript-operators
+  474  git commit -m "in progress."
+  475  git switch main
+  476  git pull origin main
+  477  git switch typescript-operators
+  478  cd typescript-operators
+  479  npx tsc --watch
+  480  cd ..
+  481  git add typescript-operators
+  482  git commit -m "Completed typescript-operators."
+  483  git push origin typescript-operators
+  484  git switch main
+  485  git pull origin main
+  486  git branch array-methods
+  487  git switch array-methods
+  488  cd array-methods
+  489  npx tsc --watch
+  490  cd ..
+  491  git switch typescript-loops-practice 
+  492  git switch array-methods
+  493  cd array-methods/
+  494  npx tsc --watch
+  495  cd ..
+  496  git add array-methods
+  497  git commit -m "in progress."
+  498  git switch main
+  499  git switch array-methods
+  500  cd array-methods
+  501  npx tsc --watch
+  502  cd ..
+  503  git add array-methods
+  504  git commit -m "in progress."
+  505  git switch main
+  506  git pull origin main
+  507  git branch command-line-basics
+  508  git switch command-line-basics 
+  509  cd command-line-basics
+  510  man man
+  511  man cat
+  512  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  513  man ls
+  514  man cat
+  515  man ls
+  516  man ls
+  517  man ls -a
+  518  man ls -aF
+  519  man ls -aF lfz-staff/
+  520  ls -aF lfz-staff
+  521  ls -aF lfz-staff > lfz-staff/contents.txt
+  522  man cat lfz-staff/contents.txt
+  523  cat lfz-staff/contents.txt
+  524  man pwd
+  525  pwd
+  526  pwd > i-was-here.txt
+  527  ls
+  528  cat i-was-here.txt
+  529  man echo
+  530  echo 'Hello, World!'
+  531  echo 'Hello, World!' > hello.txt
+  532  ls
+  533  cat hello.txt
+  534  man touch
+  535  touch tag-youre-it.txt
+  536  touch snoot/boop.txt
+  537  ls snoot/
+  538  man mkdir
+  539  mkdir -parent
+  540  mkdir -p
+  541  mkdir -p parent
+  542  ls
+  543  mkdir -p parent/child/grandchild
+  544  touch .gitkeep parent/child/grandchild
+  545  touch .gitkeep parent
+  546  touch .gitkeep parent/child/grandchild
+  547  touch parent/child/grandchild .gitkeep
+  548  touch .gitkeep /parent/child/grandchild
+  549  touch .gitkeep parent/child/grandchild
+  550  touch -p .gitkeep parent/child/grandchild
+  551  touch --help
+  552  touch -p parent/child/grandchild/.gitkeep
+  553  touch parent/child/grandchild/.gitkeep
+  554  touch parent/child/grandchild/.gitkeep
+  555  touch .gitkeep parent/child/grandchild
+  556  ls -a
+  557  man mv
+  558  mv pokiemans pokemon
+  559  ls
+  560  man rm
+  561  rm lol.txt
+  562  ls
+  563  rm -r kill-me
+  564  ls
+  565  man cp
+  566  man cp
+  567  cp and-then.txt no-and-then.txt
+  568  ls
+  569  cat and-then.txt
+  570  cat no-and-then.txt
+  571  man history
+  572  history
+  573  history > command-history.txt
