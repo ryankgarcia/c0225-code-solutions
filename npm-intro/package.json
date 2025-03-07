@@ -1,0 +1,21 @@
+{
+  "name": "npm-intro",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "typescript-eslint": "^8.26.0"
+  },
+  "scripts": {
+    "hello": "echo Hello, LearningFuze"
+  }
+}
