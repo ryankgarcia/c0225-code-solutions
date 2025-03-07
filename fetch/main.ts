@@ -18,28 +18,25 @@ async function fetchUserData(): Promise<void> {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-    const data = (await response.json()) as UserData;
+    const data = (await response.json()) as UserData[];
     console.log('userData:', data);
   } catch (error) {
-    console.log('Error:', error);
+    console.error('fetch failed!', error);
   }
 }
-
-fetchUserData();
 
 async function fetchPokemonData(): Promise<void> {
   try {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon/1');
 
-    if (!response.ok) {
-      throw new Error(`HTTP Error! Status: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`HTTP Error! Status: ${response.status}`);
 
     const data = (await response.json()) as Pokemon;
     console.log('Pokemon Data:', data);
   } catch (error) {
-    console.log('Error:', error);
+    console.error('fetch failed!', error);
   }
 }
 
+fetchUserData();
 fetchPokemonData();
