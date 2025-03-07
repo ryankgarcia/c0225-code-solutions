@@ -10,4 +10,17 @@ const names = [
     'Elizabeth',
     'Janese',
     'Donna',
+    'Darren',
+    'Darnel',
+    'Daniella',
+    'Debrah',
+    'david',
+    'drake',
+    'ryan',
+    'shawn',
+    'garrett',
 ];
+const evenNumbers = numbers.filter((n) => n % 2 === 0);
+console.log('evenNumbers', evenNumbers);
+const noD = names.filter((n) => !n.includes('d') && !n.includes('D'));
+console.log('noD', noD);

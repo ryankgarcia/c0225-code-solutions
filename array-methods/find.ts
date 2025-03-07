@@ -20,3 +20,9 @@ const products: Product[] = [
   { id: 2, name: 'Samsung Galaxy', price: 899 },
   { id: 3, name: 'Google Pixel', price: 799 },
 ];
+
+const user = users.find((users) => users.id === 2);
+console.log('user:', user);
+
+const expensiveProduct = products.find(({ price }) => price > 900);
+console.log('expensiveProduct:', expensiveProduct);
