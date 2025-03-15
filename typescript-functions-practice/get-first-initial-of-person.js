@@ -1,14 +1,13 @@
 "use strict";
 /* exported getFirstInitialOfPerson */
-const joe = {
-    firstName: 'Joe',
-    lastName: 'Jackson',
+const fullName = {
+    firstName: 'Ryan',
+    lastName: 'Garcia',
 };
 function getFirstInitialOfPerson(person) {
-    const getFullName = person.firstName + person.lastName;
-    if (getFullName.length >= 0) {
-        return firstName[0] && lastName[0];
+    fullName;
+    if (person.firstName.length >= 0) {
+        return fullName.firstName[0];
     }
 }
-console.log('first initial of henry:', getFirstInitialOfPerson(joe));
-// left off here getting the first initial and last initial of person first name and last name //
+console.log('getFirstInitial:', getFirstInitialOfPerson('Joseph Jahill'));
