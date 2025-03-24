@@ -6,9 +6,17 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What are modules?
 
+components and sub-components split up into multiple files all of which perform a specific task or function
+
 - What is the difference between named and default imports?
 
+named imports maintain the name of the entity being exported from one module and imported into another.
+default imports allow any name to be given to to the module being imported
+
 - What is the difference between named and default exports?
+
+named exports make sure that the name of the component being exported is maintained no matter where it is imported.
+default exports allow you to give any name you would like to the module which is being imported
 
 ## Notes
 
