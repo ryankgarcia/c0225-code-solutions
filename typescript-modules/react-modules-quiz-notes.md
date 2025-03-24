@@ -10,8 +10,8 @@ components and sub-components split up into multiple files all of which perform 
 
 - What is the difference between named and default imports?
 
-named imports maintain the name of the entity being exported from one module and imported into another.
-default imports allow any name to be given to to the module being imported
+named imports maintain the name of the entity being exported from one module and imported into another. put curly braces
+default imports allow any name to be given to to the module being imported. don't use curly braces.
 
 - What is the difference between named and default exports?
 
