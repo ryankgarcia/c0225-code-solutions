@@ -16,17 +16,18 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Learn React at LearningFuze!</h1>
+      <h1>React Day 1 for Ryan G!</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          counting clicks here! {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Made a few <code>src/App.tsx</code> edits to test this file
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Learned a few cool things about React by reading the documentation!
+        Woohooo!!
       </p>
     </>
   );

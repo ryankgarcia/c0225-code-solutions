@@ -6,17 +6,15 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is React?
 
-a framework that allows developers to break up their web app into individual pieces
+a library that allows developers to build websites and interfaces using individual pieces of functionality called components
 
 - What is a React component?
 
-a library that allows developers to build websites and interfaces using individual pieces of functionality.
-
-a reusable UI element like CSS, HTML
+a reusable user interface element like CSS, HTML, and JavaScript
 
 - How do you mount a React app (root component) to the DOM?
 
-using the react dom package to create a root div. in main.tsx use render method to render the app
+using the react dom package to create a root div. in main.tsx use the render method to render the app
 
 - What are some other popular frontend frameworks?
 
