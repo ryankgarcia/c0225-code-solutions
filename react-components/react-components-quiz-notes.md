@@ -6,7 +6,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is a React component?
 
-reuseable UI elements for your app. Components are regular JavaScript functions but their names start with a capital letter
+reusable UI elements for your app. Components are regular JavaScript functions but their names start with a capital letter
 
 - How do you define a component in React?
 
