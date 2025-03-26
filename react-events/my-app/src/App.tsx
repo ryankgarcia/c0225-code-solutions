@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Header } from './Header';
 import { Image } from './Image';
 import { Caption } from './Caption';
@@ -14,13 +15,18 @@ const descriptions = [
 ];
 
 export function App() {
+  const [index, setIndex] = useState(0);
+
+  function handleNext() {
+    setIndex((index + 1) % srcs.length);
+  }
   return (
     <>
       <Header text="React Image Bank" />
-      <Image srcs={srcs} />
-      <Caption captions={captions} />
-      <Description texts={descriptions} />
-      <Button label="Click for Next Image" />
+      <Image src={srcs[index]} />
+      <Caption caption={captions[index]} />
+      <Description text={descriptions[index]} />
+      <Button label="Click for Next Image" onNext={handleNext} />
     </>
   );
 }
