@@ -6,11 +6,12 @@ Answer the following questions in the provided markdown file before turning in t
 
 - When would we want to programmatically create a list of React components?
 
-when we have a group of recurring data that we want to show the user like images and text content
+because we don't know how many elements are in the array
 
 - Why is it important for React components to be data-driven?
 
-because we will often need to show several instances of the same component using different data when building interfaces
+because we will often need to show several instances of the same component using different data
+so that our components can be reusable
 
 - What `Array` method is commonly used to create a list of React components?
 
@@ -22,7 +23,7 @@ to uniquely identify it among other items in the array in case items move, get i
 
 - What is the best value to use as a "key" prop when rendering lists?
 
-a value that does not change that can uniquely identify it among other items
+a value that does not change, a sort of unique identifier, that can uniquely identify it among other items
 
 ## Notes
 

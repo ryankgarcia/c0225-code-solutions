@@ -1,24 +1,21 @@
-// import './App.css';
-// import { PokemonList } from './PokemonList';
+import { PokemonList } from './PokemonList';
+import './App.css';
 
-// export type Pokemon = {
-//   number: string;
-//   name: string;
-// }
+export type Pokemon = {
+  number: string;
+  name: string;
+};
 
-// const pokedex: Pokemon[] = [
-//   { number: '001', name: 'Bulbasaur' },
-//   { number: '004', name: 'Charmander' },
-//   { number: '007', name: 'Squirtle' },
-//   { number: '025', name: 'Pikachu' },
-//   { number: '039', name: 'Jigglypuff' },
-// ];
+const pokedex: Pokemon[] = [
+  { number: '001', name: 'Bulbasaur' },
+  { number: '004', name: 'Charmander' },
+  { number: '007', name: 'Squirtle' },
+  { number: '025', name: 'Pikachu' },
+  { number: '039', name: 'Jigglypuff' },
+];
 
-// const sortedPokemon = pokedex.map(name => <li>{name}</li>);
-// return <ul>{sortedPokemon}</ul>
+function App() {
+  return <PokemonList pokedex={pokedex} />;
+}
 
-// function App() {
-//   return <PokemonList {sortedPokemon}/>;
-// }
-
-// export default App;
+export default App;
