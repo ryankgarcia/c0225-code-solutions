@@ -10,11 +10,11 @@ when a prop is modified or when its state is modified within the state setter fu
 
 - What are some ways to create a new, modified copy of an object?
 
-using the Object.assign method
+using the Object.assign method or the spread operator
 
 - What is a good way to immutably add a value to an array?
 
-using the Array.concat method
+using the Array.concat method or the spread operator
 
 - What is a good way to immutably update a value in an array?
 
