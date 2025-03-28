@@ -6,15 +6,32 @@ Answer the following questions in the provided markdown file before turning in t
 
 - How do controlled components differ from uncontrolled components?
 
+uncontrolled - the component manages its own state (managed by the DOM)
+
+controlled - a component that is controlled by React
+
 - What are some advantages of using uncontrolled components?
+
+They are simpler to use. they don't need state
 
 - What are some advantages of using controlled components?
 
+React will take care of event handling
+
 - Which style do you prefer?
+
+controlled, so that I don't rely on the DOM to control the component
 
 - What two props must you pass to an input for it to be "controlled"?
 
+value and onChange props
+
 - What are some popular npm packages for creating forms in React?
+  ** if an app uses a lot of forms or has complex forms, use an npm package designed specifically for building forms **
+
+**React Hook Form (lightweight, easy to use)**,
+Formik (complex to use, but handles complex forms well),
+React Final Form
 
 ## Notes
 
