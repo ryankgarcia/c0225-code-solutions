@@ -12,8 +12,13 @@ export function PasswordBox() {
     showedErrorText = 'A password is required.';
   } else if (text.length < 8) {
     showedErrorText = 'Your password is too short.';
+  } else if (!/\d/.test(text)) {
+    showedErrorText = 'Digit required.';
+  } else if (!/[A-Z]/.test(text)) {
+    showedErrorText = 'Uppercase required.';
+  } else if (!/[!@#$%^&*()]/.test(text)) {
+    showedErrorText = 'Special character required.';
   }
-
   return (
     <div>
       <div className="passwordBoxLabel">
@@ -25,9 +30,13 @@ export function PasswordBox() {
         className="passwordBox"
         onChange={(e) => setText(e.target.value)}></input>
       <span>
-        {text.length < 8 ? <FaTimes color="red" /> : <FaCheck color="lime" />}
+        {showedErrorText.length === 0 ? (
+          <FaCheck color="lime" />
+        ) : (
+          <FaTimes color="red" />
+        )}
       </span>
-      <div>{showedErrorText}</div>
+      {showedErrorText && <div>{showedErrorText}</div>}
     </div>
   );
 }
