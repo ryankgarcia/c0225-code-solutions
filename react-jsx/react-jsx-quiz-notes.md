@@ -6,7 +6,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is JSX?
 
-JSX is a syntax extension
+JSX is a syntax extension of JavaScript that allows developers to dynamically create DOM elements. It looks similar to standard HTML in its structure.
 
 - How does React use JSX to render components?
 
