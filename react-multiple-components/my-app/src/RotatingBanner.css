@@ -1,0 +1,24 @@
+.numbers {
+  background-color: transparent;
+  border-style: ridge;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.textDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prevNextButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4rem;
+  cursor: pointer;
+
+  @media (.prevnextbuttons: hover) {
+    background-color: lightblue;
+  }
+}
