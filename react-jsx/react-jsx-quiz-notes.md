@@ -10,7 +10,7 @@ JSX is a syntax extension of JavaScript that allows developers to dynamically cr
 
 - How does React use JSX to render components?
 
-using a converter
+React calls the component function, which then returns JSX. React then converts the JSX to HTML and pushes it to the DOM.
 
 ## Notes
 
