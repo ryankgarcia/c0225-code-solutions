@@ -1,5 +1,3 @@
-# react-components-quiz-notes
-
 ## Quiz Questions
 
 Answer the following questions in the provided markdown file before turning in this exercise:

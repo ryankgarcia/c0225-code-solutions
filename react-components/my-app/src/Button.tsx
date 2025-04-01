@@ -1,7 +1,3 @@
 export function Button() {
-  return (
-    <>
-      <button>Click for next image</button>
-    </>
-  );
+  return <button>Click For Next Image</button>;
 }

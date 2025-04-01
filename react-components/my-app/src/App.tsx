@@ -1,11 +1,11 @@
 import './App.css';
-import { Header } from './Header.tsx';
-import { Image } from './image.tsx';
-import { Caption } from './Caption.tsx';
-import { Description } from './Description.tsx';
-import { Button } from './Button.tsx';
+import { Button } from './Button';
+import { Caption } from './Caption';
+import { Description } from './Description';
+import { Header } from './Header';
+import { Image } from './Image';
 
-export default function App() {
+function App() {
   return (
     <>
       <Header />
@@ -16,3 +16,5 @@ export default function App() {
     </>
   );
 }
+
+export default App;
