@@ -1,0 +1,13 @@
+/* edit these before turning the project in  */
+
+.topic {
+  border: 2px;
+}
+
+.topic-title {
+  color: white;
+}
+
+.topic.content {
+  display: inline;
+}
