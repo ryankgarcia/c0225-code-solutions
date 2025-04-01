@@ -10,7 +10,7 @@ reusable UI elements for your app. Components are regular JavaScript functions b
 
 - How do you define a component in React?
 
-with the function keyword and a capital for the component name followed by parenthesis curly braces. and inside those curly braces a return statement followed by the component you want to create in between the return statement and the closing curly brace. Components should be defined at the top level and not within other components.
+with the function keyword and a begins with capital for the component name followed by parenthesis curly braces. and inside those curly braces a return statement followed by the component you want to create in between the return statement and the closing curly brace. Components should be defined at the top level and not within other components.
 
 - How is a component "rendered" (made visible on the browser page)?
 
