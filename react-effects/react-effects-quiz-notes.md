@@ -6,21 +6,43 @@ Answer the following questions in the provided markdown file before turning in t
 
 - When is a component "mounted" to the DOM?
 
+a component is mounted when it is first becomes visible on the webpage
+
 - What is a React Effect?
+
+a function that runs after a component mounts
 
 - When should you use an Effect and when should you not use an Effect?
 
+use an effect when we need to sync React with things outside of React. if we needed to take an effect as soon as my component mounts or re-renders
+
+don't use an effect if we use state or props to change state, or we don't have things outside of React
+
 - When do Effects run?
+
+when the component mounts or
+effects run once one of its dependencies changes
 
 - What function is used to declare an Effect?
 
+the useEffect Hook
+
 - What are Effect dependencies and how do you declare them?
+
+variables that when changed indicate your Effect needs to get executed again
+your dependencies are the second argument of your useEffect function
 
 - Why would you want to clean up from an Effect?
 
+to eliminate memory leaks
+
 - How do you clean up from an Effect?
 
+return a function, and return the action of what it is that you want to clean up
+
 - When does the cleanup function run?
+
+when its unmounted from the DOM
 
 ## Notes
 

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars -- Remove me */
 import { useEffect, useState } from 'react';
 import { readItems, type Item } from './read';
 
@@ -7,10 +6,19 @@ export function List() {
   const [items, setItems] = useState<Item[]>([]);
   const [error, setError] = useState<unknown>();
 
-  // Your code here:
-  //  - When the component mounts:
-  //    - Read the items using `readItems` and update state so the list displays
-  //    - Handle errors from `readItems`
+  useEffect(() => {
+    async function getData() {
+      try {
+        const data = await readItems();
+        setItems(data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    getData();
+  }, []);
 
   if (isLoading) {
     return <div>Loading...</div>;
