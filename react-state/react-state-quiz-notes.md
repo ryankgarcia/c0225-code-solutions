@@ -37,28 +37,47 @@ The most efficient method to update all the useState from each component would b
 
 ## Notes
 
-All student notes should be written here.
+Component specific memory is known as 'State'. This is because components often need to change what is on the screen as a result of an interaction made by the user.
 
-How to write `Code Examples` in markdown
+`const [index, setIndex] = useState(0);`
 
-for JS:
+in this example...
+'index' is the State variable and..
+'setIndex' is known as the StateSetter Function
 
-```javascript
-const data = 'Howdy';
-```
+the [ ] syntax is array destructuring and lets you read values from an array.
+The array returned by useState ALWAYS has exactly two items.
 
-for HTML:
+this is an example of how they work together..
 
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
+` function handleClick() {
+setIndex(index + 1);
+}`
 
-for CSS:
+In React, any function starting with 'use' is called a Hook
+Hooks are special functions that are only available while React is rendering. They let you 'hook' into different React features.
 
-```css
-div {
-  width: 100%;
-}
-```
+Hooks (special React functions starting with 'use') can only be defined at the top level of your components..or your own Hooks. You CANNOT call Hooks inside conditions, loops, or nested functions. They are similar to how you import modules at the top of your file
+
+When calling 'useState' you are saying to React that you want this component to remember something. In the example above you called this 'index'. Conventions make things easy to remember across projects so try and keep it simple to remember. The convention we will use is this..
+
+const [something, setSomething] when referring to the 'use' Hook.
+The only argument to useState is the initial value of your state variable
+
+In React, a component will be re-rendered when...
+
+1. The state value is updated - (schedules a re-render)
+2. A component's parent is re-rendered
+
+<button onClick={()=> setCount(count+1)}>count is {count}</button>
+
+this above..
+adds an onClick handler to the button
+gives the onClick handler an arrow function to call on click which calls the setCount (stateSetter) function and passes it the current value of count+1
+
+Keep in mind, onClick is now a prop so be sure to include it in your props for the component
+
+WHEN THE BUTTON IS CLICKED...
+-the new value of count will be cached and stored by React (so value is not lost)
+-React will schedule a re-render of the App component because it's state was changed using a StateSetter function
+-when the component re-renders and calls useState, the updated cached value of count will be returned and assigned to the count variable
