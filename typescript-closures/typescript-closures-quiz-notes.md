@@ -6,7 +6,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - In JavaScript, when is scope determined?
 
-in its function definition
+things we have access to at a certain point in time, at run time
 
 - What allows JavaScript functions to "remember" variables from their surroundings?
 
@@ -14,15 +14,15 @@ through the concept of closures. each function carries a metaphorical backpack i
 
 - What values does a closure contain?
 
-all of the local variables in scope during its function definition
+a reference to that function, a reference to the variables in the surrounding scope
 
 - When is a closure created?
 
-when a function returns a function
+when a function is being declared
 
 - How can you tell if a function will be created with a closure?
 
-when you create a function, you create the function as well as a closure
+when a function has references to variables or functions in the surrounding scope
 
 - In React, what is one important case where you need to know if a closure was created?
 
