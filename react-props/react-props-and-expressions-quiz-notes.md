@@ -14,34 +14,28 @@ you declare props right before the component declaration. you access props as yo
 
 - How do you pass props to a component?
 
+you pass props to a component by adding them after the function name
+
 - How do you write JavaScript expressions in JSX?
 
-you wrap your expressions in curly braces
+you can write JavaScript expressions in JSX by wrapping your expressions in curly braces
 
 ## Notes
 
-All student notes should be written here.
+Lecture Notes...
 
-How to write `Code Examples` in markdown
+Props are properties that your react component uses and are similar to attributes in HTML.
 
-for JS:
+The purpose of props is to customize our components. Props support reuse for our components.
 
-```javascript
-const data = 'Howdy';
-```
+Passing props to a component is like how you pass attributes to an element in HTML.
 
-for HTML:
+React (below) => HTML (below)
+src{src} => is like...class="photo"
 
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
+All your JSX must be on one line..UNLESS you use parenthesis (wrap JSX in parenthesis)
+There must only be one parent element in your JSX
+All tags have to be closed
+There can only be ONE parent element in your JSX
 
-for CSS:
-
-```css
-div {
-  width: 100%;
-}
-```
+CMD + SPACE => takes you to where the component was declared

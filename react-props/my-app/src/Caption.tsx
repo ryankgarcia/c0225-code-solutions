@@ -1,3 +1,7 @@
-export function Caption() {
-  return <h3>A beautiful Image of Space</h3>;
+type Props = {
+  title: string;
+};
+
+export function Caption({ title }: Props) {
+  return <h3>{title}</h3>;
 }
