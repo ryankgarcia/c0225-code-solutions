@@ -4,6 +4,7 @@ import { useState } from 'react';
 type Props = {
   srcs: string[];
 };
+
 export function Image({ srcs }: Props) {
   const [index, setIndex] = useState(0);
   return (

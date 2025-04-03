@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Caption.css';
 
 type Props = {
   captions: string[];
@@ -6,6 +7,10 @@ type Props = {
 export function Caption({ captions }: Props) {
   const [index, setIndex] = useState(0);
   return (
-    <h3 onClick={() => setIndex((index + 1) % captions.length)}>{captions}</h3>
+    <h3
+      className="thatsCap"
+      onClick={() => setIndex((index + 1) % captions.length)}>
+      {captions[index]}
+    </h3>
   );
 }
