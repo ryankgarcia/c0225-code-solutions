@@ -27,28 +27,67 @@ a value that does not change, a sort of unique identifier, that can uniquely ide
 
 ## Notes
 
-All student notes should be written here.
+**Notes from the React Documentation**
 
-How to write `Code Examples` in markdown
+Overview: You will often want to display multiple similar components from a collection of data. Using the JavaScript array methods filter() OR map() we can manipulate an array of data into an array of components.
 
-for JS:
+To understand how these array methods work, lets use map
 
-```javascript
-const data = 'Howdy';
-```
+1. Move the data into an array
 
-for HTML:
+const people = [
+'Creola Katherine Johnson: mathematician',
+'Mario José Molina-Pasquel Henríquez: chemist',
+'Mohammad Abdus Salam: physicist',
+'Percy Lavon Julian: chemist',
+'Subrahmanyan Chandrasekhar: astrophysicist'
+]
 
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
+2. Map the people members into a new array of JSX nodes, listItems
 
-for CSS:
+const listItems = people.map(person => <li>{person}</li>);
 
-```css
-div {
-  width: 100%;
-}
-```
+this map array method is creating a new array person from the people array and returning that new array in an HTML 'li' element
+
+3. Return listItems from your component wrapped in a <ul>
+
+return <ul>{listItems}</ul>
+
+step 3 is returning an unordered list with that variable we created in step 2 (actually an array), which is holding all the individual 'li' elements
+
+We can take this a step further by structuring the data a little more. We can do this by assigning the data, properties such as id, profession, and name.
+
+So if we only want to see people with the profession of chemist, we can do that using the filter method..same idea, just a different array method we will be applying to the array data.
+
+1. Create a new array of 'chemist' people by calling the filter method
+
+const chemists = people.filter(person => person.profession === 'chemist')
+
+2. Map over chemist
+
+const listItems = chemists.map(person =>
+
+<li>
+  <img src={getImageUrl(person)}
+  alt={person.name}
+  />
+  <p>
+    <b>{person.name}:</b>
+    { ' ' + person.profession + ' '}
+    known for {person.accomplishment}
+  </p>
+</li>
+)
+
+3. Return the listItems from your component
+
+return <ul>{listItems}</ul>
+
+**Tip**
+Arrow functions containing => followed by { have a 'block body'. You have to have a return statement or else nothing gets returned.
+
+To keep list items in order, we use key.
+Each array item needs to have a key so that it can be uniquely identified among other items in that array. JSX elements inside a map() call always need keys. Rather than generating keys on the fly, include them in your data.
+The following is an example..
+
+<li key={person.id}>. . .</li>
