@@ -1,29 +1,35 @@
-// import { useRef, useState } from 'react';
-// import './App.css';
-// import { CancelButton } from './Cancel';
-// import { DeleteButton } from './DeleteButton';
+import { useState } from 'react';
+import { Modal } from './Modal';
+import './App.css';
 
-// type Props = {
-//   onCustomClick: () => void;
-// };
+function App() {
+  const [isOpen, setIsOpen] = useState(false);
 
-// function App({ click }: Props) {
-//   const modal = useRef<HTMLDialogElement>(null);
-//   const [click, setClick] = useState();
+  function handleOpen() {
+    setIsOpen(true);
+  }
 
-//   function handleClick() {
-//     setClick();
-//   }
-//   return (
-//     <div>
-//       <DeleteButton onCustomClick={handleClick} />
-//       <dialog ref={modal} >
-//         <p>Do you really want to delete this?</p>
-//         <DeleteButton />
-//         <CancelButton />
-//       </dialog>
-//     </div>
-//   );
-// }
+  function handleClose() {
+    setIsOpen(false);
+  }
 
-// export default App;
+  function handleDelete() {
+    alert('I have been deleted');
+    setIsOpen(false);
+  }
+
+  // children in props (in Modal component) is referencing all the things nested in that component
+
+  return (
+    <div>
+      <button onClick={handleOpen}>Delete me!</button>
+      <Modal isOpen={isOpen}>
+        <p>Are you sure you want to delete this?</p>
+        <button onClick={handleClose}>Close</button>
+        <button onClick={handleDelete}>Delete</button>
+      </Modal>
+    </div>
+  );
+}
+
+export default App;

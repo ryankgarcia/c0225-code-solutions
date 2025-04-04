@@ -14,8 +14,8 @@ using the .showModal method, .show() method, and hide using the .close() method 
 
 - How do you manipulate child components in React? Why will that not work for the `<dialog>` element?
 
-by having the parent element tell it what you want its children to do via event handlers
-it won't work for the dialog element because
+via Props.
+it won't work because dialog is an element inside of our component.
 
 - How do you call the dialog element's functions in React?
 
@@ -23,7 +23,7 @@ using the useRef Hook and using it as an attribute to an element in the JSX
 
 - How can you render nested components or JSX elements in React?
 
-via Props
+by passing them as children to the component
 
 ## Notes
 
