@@ -6,7 +6,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - How does the browser URL change when navigating through a Single Page App? How does a user expect the URL to change as they navigate through a browser app?
 
-The URL in the address bar does not change, however, Routing in the React app navigates the user to new 'pages' and is reflected in the URL in the address bar to indicate a new page.
+The URL in the address bar does not change in a single page app, however, Routing in the React app navigates the user to new 'pages' and is reflected in the URL in the address bar to indicate a new page.
 
 - What NPM package can be used to make navigating a React app behave as users expect?
 
