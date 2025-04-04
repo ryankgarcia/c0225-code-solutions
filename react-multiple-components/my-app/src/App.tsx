@@ -1,5 +1,19 @@
+import { RotatingBanner } from './RotatingBanner';
 import './App.css';
 
-function App() {}
+const items = [
+  'Aardvark',
+  'Bengal',
+  'Caterpillar',
+  'Dromedary',
+  'Elephant',
+  'Ferret',
+];
 
-export default App;
+export function App() {
+  return (
+    <div className="App">
+      <RotatingBanner items={items} />
+    </div>
+  );
+}
