@@ -6,7 +6,8 @@ Answer the following questions in the provided markdown file before turning in t
 
 - When does React re-render a component?
 
-when a prop is modified or when its state is modified within the state setter function
+when a prop is modified or
+when its State is modified within the state setter function
 
 - What are some ways to create a new, modified copy of an object?
 
