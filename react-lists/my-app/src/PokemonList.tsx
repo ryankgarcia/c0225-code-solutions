@@ -15,14 +15,17 @@ type Props = {
 
 // do this using the map method (which accepts a function as its argument)
 
-// (p) represents the function and => represents return.. we want to return individual li's
+// (p) represents the function and ' => ' represents return.. we want to return individual li's
 // so we add li elements and inside those li's we want {p.name} which is the pokemon's name
+
+// last, we include a key for each pokemon to show each one has a unique identifier, and we include that inside
+// the li element of each pokemon
 
 export function PokemonList({ pokedex }: Props) {
   return (
     <ul>
       {pokedex.map((p) => (
-        <li>{p.name}</li>
+        <li key={p.number}>{p.name}</li>
       ))}
     </ul>
   );

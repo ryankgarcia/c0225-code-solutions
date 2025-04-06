@@ -23,7 +23,7 @@ to uniquely identify it among other items in the array in case items move, get i
 
 - What is the best value to use as a "key" prop when rendering lists?
 
-a value that does not change, a sort of unique identifier, that can uniquely identify it among other items
+the best value to use as a key prop is a value that does not change, a sort of unique identifier, that can uniquely identify it among other items
 
 ## Notes
 
