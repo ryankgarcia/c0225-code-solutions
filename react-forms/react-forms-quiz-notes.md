@@ -12,11 +12,11 @@ controlled - a component that is controlled by React
 
 - What are some advantages of using uncontrolled components?
 
-They are simpler to use. they don't need state
+They are simpler to use. they don't need state. you don't have to give them a name, or value.
 
 - What are some advantages of using controlled components?
 
-React will take care of event handling
+React will take care of event handling. Th
 
 - Which style do you prefer?
 
@@ -24,7 +24,7 @@ controlled, so that I don't rely on the DOM to control the component
 
 - What two props must you pass to an input for it to be "controlled"?
 
-value and onChange props
+the value and onChange props
 
 - What are some popular npm packages for creating forms in React?
   ** if an app uses a lot of forms or has complex forms, use an npm package designed specifically for building forms **
