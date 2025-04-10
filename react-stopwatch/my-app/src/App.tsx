@@ -1,17 +1,12 @@
-// import { useState } from 'react';
-// import './App.css';
-// import { PauseButton } from './PauseButton';
-// import { PlayButton } from './PlayButton';
-// import { WatchFace } from './WatchFace';
+import './App.css';
+import { StopWatch } from './StopWatch';
 
-// function App() {
-//   const [play, setPlay] = useState<boolean>(false);
-//   return (
-//     <>
-//       <WatchFace />
-//       {() => (play ? <PauseButton /> : <PlayButton />)}
-//     </>
-//   );
-// }
+function App() {
+  return (
+    <>
+      <StopWatch />
+    </>
+  );
+}
 
-// export default App;
+export default App;
