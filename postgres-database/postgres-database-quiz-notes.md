@@ -6,22 +6,25 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is a database schema?
 
-a collection of tables which define how the data in a relational database should be organized
-a set of all your tables in your database and their relationship to each other
+a set of all the tables in your database and their relationship to each other
 
 - What is a table?
 
-data that is stored and has relationships with each other
+a table is data that is stored and has relationships with each other
 
 - What is a row?
 
-one piece of data out of the table
+one piece of data out of the table that has similar attributes
 
 - What is an attribute and what other names are used to describe them?
 
-a column, it is a piece of data every row has in common
+an attribute is a column. another name to describe them are column headers
 
 ## Notes
+
+to search inside an sql file from the command line use this...
+
+`psql -d <database_name> -c "select * from table_name"`
 
 A collection of tables is called a schema.
 
