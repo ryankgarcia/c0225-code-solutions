@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { TopicCard } from './TopicCard';
 
-export type Topic = {
+export interface Topic {
   id: number;
   title: string;
   content: string;
-};
+}
 
-type Props = {
-  topics: Topic[];
-};
+interface Props {
+  topic: Topic[];
+}
 
-export function Accordion({ topics }: Props) {
+export function Accordion({ topic }: Props) {
   const [openTopic, setOpenTopic] = useState<number | undefined>();
 
   function handleClick(topicId: number) {
@@ -19,7 +19,7 @@ export function Accordion({ topics }: Props) {
   }
   return (
     <div>
-      {topics.map((topic) => (
+      {topic.map((topic) => (
         <TopicCard
           key={topic.id}
           topic={topic}
