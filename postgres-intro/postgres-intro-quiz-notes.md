@@ -12,42 +12,31 @@ so you can have your data available on multiple devices
 
 - What is PostgreSQL and what are some alternative relational databases?
 
-<!-- it is a (PostgreSQL) -- finish writing this answer -->
+PostgreSQL is a relational database that is the most advanced open source database of its kind, is free, and is incredibly powerful
 
-MySQL, Oracle,
+Some other relational databases include MySQL, Oracle, SQL Server
 
 - What are some advantages of learning a relational database?
 
-it protects data integrity and organize the data
+the advantages of learning about relational databases is that at some point, we as web developers will need to work with them at some point in our career, and they protect data integrity making data corruption as unlikely as possible
 
 - What is one way to see if PostgreSQL is running?
 
-using the postgresql status command
+one way to see if PostgreSQL is running is by using the postgresql status command
+sudo service postgresql status
 
 ## Notes
 
-All student notes should be written here.
+databases are good for storing and retrieving complex data in an organized fashion
+PostgreSQL is a powerful, free, open source relational database management system
 
-How to write `Code Examples` in markdown
+other popular relational databases are:
+MySQL
+SQL Server by Microsoft
+Oracle by Oracle Corporation
 
-for JS:
+Not all databases are relational. MongoDB is a JSON document store, Redis is an in-memory key-value store, Neo4j is a graph database, and DynamoDb is a popular persistent key-value store available in AWS
 
-```javascript
-const data = 'Howdy';
-```
+Relational databases are commonly referred to as "SQL databases" because you usually do work with them using some variation of the SQL language.
 
-for HTML:
-
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
-
-for CSS:
-
-```css
-div {
-  width: 100%;
-}
-```
+A quality of many relational databases is that they support good guarantees about data integrity. Relational databases can store and modify data in a way that makes data corruption as unlikely as possible.
