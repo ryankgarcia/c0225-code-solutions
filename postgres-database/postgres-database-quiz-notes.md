@@ -23,28 +23,24 @@ a column, it is a piece of data every row has in common
 
 ## Notes
 
-All student notes should be written here.
+A collection of tables is called a schema.
 
-How to write `Code Examples` in markdown
+A schema defines how the data in a relational database should be organized.
 
-for JS:
+You should be able to complete most things in relationship to the database in the command line but a good visualization tool will diagram the the tables in the database, their structure and the relationship between them
 
-```javascript
-const data = 'Howdy';
-```
+There are operating system specific visualization tools which are often paid for
 
-for HTML:
+The following are a few good visualization tools for your own use...
+DbVisualizer - mac, linux, windows
+pgAdmin - mac, linux, windows
+DBeaver - mac, linux, windows
 
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
+Another free tool that comes built into the curriculum is pgWeb. It doesn't provide visualization features but it does provide an overview of data and tables, and lets you run SQL queries.
 
-for CSS:
+this is how you would run it from the command line
 
-```css
-div {
-  width: 100%;
-}
-```
+pgweb <database-name>
+
+**Side Note**
+to stop pgweb do Control+C in your terminal, after you are finished with it, be sure to close it using the same command (Control+C). If you want to run it, and need to use the terminal, open up a second terminal window and work from that one.
