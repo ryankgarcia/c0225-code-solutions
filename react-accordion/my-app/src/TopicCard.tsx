@@ -12,7 +12,9 @@ export function TopicCard({ topic, isOpen, onCustomClick }: TopicProps) {
       <div className="topic-title" onClick={() => onCustomClick(topic.id)}>
         <h3>{topic.title}</h3>
       </div>
-      {isOpen && <div className="topic-content">{topic.content}</div>}
+      <div className={`topic-content ${isOpen ? 'open' : ''}`}>
+        <p>{topic.content}</p>
+      </div>
     </div>
   );
 }

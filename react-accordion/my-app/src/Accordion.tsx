@@ -18,7 +18,7 @@ export function Accordion({ topic }: Props) {
     setOpenTopic(openTopic === topicId ? undefined : topicId);
   }
   return (
-    <div>
+    <div className="accordion-wrapper">
       {topic.map((topic) => (
         <TopicCard
           key={topic.id}
