@@ -8,11 +8,19 @@ type Props = {
 export function CardComponent({ product }: Props) {
   return (
     <Link to={`details/${product.productId}`}>
-      <div>
-        <img src={product.imageUrl} alt="product image" />
-        <p>{product.name}</p>
-        <p>{toDollars(product.price)}</p>
-        <p>{product.shortDescription}</p>
+      <div className="card-container">
+        <div className="card">
+          <img
+            src={product.imageUrl}
+            alt="product image"
+            className="card-image"
+          />
+          <div className="card-body">
+            <p className="card-title">{product.name}</p>
+            <p className="card-price">{toDollars(product.price)}</p>
+            <p className="card-description">{product.shortDescription}</p>
+          </div>
+        </div>
       </div>
     </Link>
   );
