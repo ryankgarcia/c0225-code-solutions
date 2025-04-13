@@ -34,10 +34,10 @@ export function Catalog() {
   }
 
   return (
-    <>
+    <div className="card-grid">
       {items.map((product) => (
         <CardComponent key={product.productId} product={product} />
       ))}
-    </>
+    </div>
   );
 }

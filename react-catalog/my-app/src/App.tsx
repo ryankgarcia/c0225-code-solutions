@@ -4,13 +4,14 @@ import { Header } from './Components/Header';
 import { NotFound } from './Pages/NotFound';
 import { About } from './Pages/About';
 import { Catalog } from './Pages/Catalog';
+import { ProductDetails } from './Pages/ProductDetails';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Header />}>
         <Route index element={<Catalog />} />
-        {/* <Route path="details/:productId" element={<ProductDetails />} /> */}
+        <Route path="details/:productId" element={<ProductDetails />} />
         <Route path="about" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Route>

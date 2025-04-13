@@ -1,3 +1,3 @@
 export function About() {
-  return <h2>About Page is here!</h2>;
+  return <h2 className="about">About Page is here!</h2>;
 }
