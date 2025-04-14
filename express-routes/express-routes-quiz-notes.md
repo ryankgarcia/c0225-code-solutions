@@ -37,3 +37,20 @@ and they are retrieved with destructuring and assigning them to the req.params o
 ## Notes
 
 Express middleware is like an array of functions held by the Express process.
+
+the route indicates the work that the client is requesting from the server.
+the method indicates the type of work requested
+the path indicates WHAT the work should be perform on
+
+'Mounting' means calling a special function, like use or get, which add the function to the middleware array
+
+An Express app is a series of middleware function calls
+
+Middleware functions are functions that have access to the request object and the response object and the next middleware function in the app request-response cycle. the next middleware function is commonly denoted by a variable named next.
+
+Middleware function can..
+
+1. execute any code
+2. make changes to the request and the response objects
+3. end the request-response cycle
+4. call the next middleware function in the stack
