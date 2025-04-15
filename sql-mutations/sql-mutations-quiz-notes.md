@@ -41,6 +41,16 @@ including the returning\* statement
 
 ## Notes
 
+in command line do this to help with viewing the data in the browser.
+** pgweb --db pagila **
+
+CRUD FOR SQL
+
+CREATE = INSERT
+READ = SELECT
+UPDATE = UPDATE
+DELETE = DELETE
+
 in a database there is no undo button!
 
 a foreign key is a primary key from another table. it encodes the relationship
@@ -52,3 +62,22 @@ any time you do a mutation include returning\* at the end
 psql -d pagila -f name-of-file.sql
 
 in SQL a list of values is referred to as a tuple
+
+an 'insert' statement is a means of adding rows to a table..this is how it would work...
+
+**example**
+insert into "products" ("name", "description", "price", "category") // these items are wrapped in double quotes
+values ('Ostrich Pillow', 'Feel comfy and cozy!', 99, 'self care') // these items are wrapped in single quotes
+
+then by doing the following would return the new entry and the entire table
+select \*
+from "products"
+
+**adding multiple rows** same idea, except you would just add the content below the values for each row as follows
+
+insert into "products" ("name", "description", "price", "category") // these items are wrapped in double quotes
+values ('Ostrich Pillow', 'Feel comfy and cozy!', 99, 'self care')
+('Tater mitts', 'Scrub home tatters!', 6, 'cooking')
+returning \*; // the returning star is useful because it returns all the rows that were affected by a mutation query
+
+when writing code for the backend API, you will almost always use a returning \*

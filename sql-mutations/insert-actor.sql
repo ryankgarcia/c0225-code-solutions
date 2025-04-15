@@ -1,3 +1,3 @@
 insert into "actors" ("firstName", "lastName")
-values ('Ryan', 'Reynolds')
+values ('Bryan', 'James')
 returning *;
