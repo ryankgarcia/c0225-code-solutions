@@ -1,5 +1,5 @@
 insert into "languages" ("name")
 values ('HTML'),
-( 'CSS'),
-('JavaScript')
+      ( 'CSS'),
+      ('JavaScript')
 returning *;

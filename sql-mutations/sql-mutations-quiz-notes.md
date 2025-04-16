@@ -46,10 +46,10 @@ in command line do this to help with viewing the data in the browser.
 
 CRUD FOR SQL
 
-CREATE = INSERT
+CREATE = INSERT ** this exercise focuses on these with an asterisk
 READ = SELECT
-UPDATE = UPDATE
-DELETE = DELETE
+UPDATE = UPDATE ** this exercise focuses on these with an asterisk
+DELETE = DELETE \*\* this exercise focuses on these with an asterisk
 
 in a database there is no undo button!
 
@@ -81,3 +81,5 @@ values ('Ostrich Pillow', 'Feel comfy and cozy!', 99, 'self care')
 returning \*; // the returning star is useful because it returns all the rows that were affected by a mutation query
 
 when writing code for the backend API, you will almost always use a returning \*
+
+when updating a table, you must use a 'where' clause or you will delete all of the data by accident.
