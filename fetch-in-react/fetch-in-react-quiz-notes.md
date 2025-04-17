@@ -10,13 +10,25 @@ fetch()
 
 - What two things need to be done to properly handle HTTP request errors? Why?
 
+send correct status codes using middleware from the backend
+
+catch errors in fetch calls that show up for the user for the frontend
+
 - How can `useEffect` be used to load data for a component?
+
+the useEffect can trigger after the user has done an action
 
 - How do you use `useEffect` to load component data just once when the component mounts?
 
+by adding an empty dependency array as the second argument to your useEffect hook
+
 - How do you use `useEffect` to load component data every time the data key changes?
 
+if one of the variables in the dependency array's state changes, this will change
+
 - In a large-scale production app, what are some better alternatives for loading and managing backend data?
+
+React Query and Vercel SWR
 
 ## Notes
 
@@ -52,5 +64,3 @@ useEffect (() => {
 }, [ a , b ]);
 
 a clean up function uses the keyword "return" and cleans up the function that was just executed in the useEffect. this is to reduce memory leaks
-
-useEffect will be used in your event handlers
