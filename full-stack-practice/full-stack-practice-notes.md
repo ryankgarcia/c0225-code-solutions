@@ -6,7 +6,7 @@ write notes here...
 
 What needs to happen? Be very specific in each step so that you have a set of directions to work with
 
-first work on getting the database to run (database setup)
+first work on getting the database to run (database setup) (done)
 
 - create the database (call it fullStack-practice)
 - run the database, test that it is working properly (sudo service postgresql status, then start)
