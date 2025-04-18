@@ -41,17 +41,19 @@ a {
   background-color: white;
   width: 25%;
   height: 100vh;
+  transition: 0.5s ease-in-out;
 }
 
 .hamburger-closed {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   padding: 1rem;
   gap: 1rem;
   background-color: white;
   width: 8%;
   height: 100vh;
+  transition: 0.5s ease-in-out;
 }
 
 a:hover {
