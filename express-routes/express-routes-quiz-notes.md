@@ -15,7 +15,7 @@ The server could delete objects in response to a GET request, the mapping is onl
 
 - What is Express middleware?
 
-middleware is a set of function that fulfill the request action
+middleware is a set of functions that fulfill the request action
 
 - What is Express middleware useful for?
 
@@ -28,7 +28,7 @@ using the app.use() method which will mount the specified middleware function or
 
 - Which objects does an Express application pass to your middleware to manage the request/response lifecycle of the server?
 
-req and res (request & response), followed by the next function. the request followed by the response
+req and res (request & response), followed by the next function
 
 - How do you specify and retrieve route parameters?
 
@@ -57,3 +57,7 @@ Middleware function can..
 4. call the next middleware function in the stack
 
 Error-handling middleware takes 4 arguments.
+
+All of your routing is handled with middleware in Express (server)
+
+request followed by the response then the next
