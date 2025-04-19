@@ -11,7 +11,13 @@ export function authMiddleware(
   res: Response,
   next: NextFunction
 ): void {
-  /* your code here */
+  const auth = req.get('authorization');
+  if (!auth) throw new ClientError(401, 'authorization required');
+  const token = auth.split('Bearer ')[1];
+  if (!token) throw new ClientError(401, 'authorization required');
+  const payload = jwt.verify(token, hashKey);
+  req.user = payload as Request['user'];
+  next();
 }
 
 /*
