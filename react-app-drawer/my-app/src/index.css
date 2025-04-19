@@ -18,10 +18,26 @@ a {
   text-decoration: inherit;
 }
 
+.dflex {
+  display: flex;
+}
+
+.img-size {
+  height: 22px;
+  width: 22px;
+  object-fit: contain;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+
 .hs-text {
   color: black;
-
-  /* padding-left: 5%; */
 }
 
 .icon-colors {
