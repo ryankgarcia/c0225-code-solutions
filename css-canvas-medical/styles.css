@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 6.25rem;
+}
+
+.row {
+  flex-basis: 100%;
+  box-sizing: border-box;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.header {
+  font-family: Avenir, sans-serif;
+  font-size: 25px;
+  margin: 50px;
+  border: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #aaa;
+}
+
+.get-started {
+  color: #2a4464;
+}
+
+.contact-us {
+  background-color: #2a4464;
+  color: white;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
