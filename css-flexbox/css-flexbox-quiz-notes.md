@@ -26,26 +26,6 @@ think of every web page as rows and columns. for every row, you can separate col
 
 ---
 
-How to write `Code Examples` in markdown
+Flexbox operates on a container-and-items model. The container becomes a flex container once the display property is set to flex. Inside this container, the direct children automatically become flex items.
 
-for JS:
-
-```javascript
-const data = 'Howdy';
-```
-
-for HTML:
-
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
-
-for CSS:
-
-```css
-div {
-  width: 100%;
-}
-```
+The flex-wrap property allows flex items to wrap onto multiple lines, instead of squeezing them onto one line. This is useful when you want to maintain the size of the flex items but have limited space in the container. The default value of flexwrap is nowrap.
