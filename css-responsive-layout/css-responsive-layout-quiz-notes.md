@@ -13,28 +13,51 @@ Answer the following questions in the provided markdown file before turning in t
 
 ## Notes
 
-All student notes should be written here.
+A media query consists of:
 
-How to write `Code Examples` in markdown
+1. a media type, which tells the browser what kind of media this code if for (ex: print or screen)
+2. a media expression, which is a rule, or test that must be passed for the contained CSS to be applied
+3. a set of CSS rules that will be applied if the test passes and the media type is correct
 
-for JS:
+Here is an example:
 
-```javascript
-const data = 'Howdy';
-```
-
-for HTML:
-
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
-
-for CSS:
-
-```css
-div {
-  width: 100%;
+@media screen and (width: 600px) {
+body {
+color: red;
 }
-```
+}
+
+To combine media features, you can use 'and'.
+
+Here is an example:
+
+@media screen and (min-width: 600px) and (orientation: landscape) {
+body {
+color: blue;
+}
+}
+
+you could also comma separate queries using or logic
+
+@media screen and (min-width: 600px), screen and (orientation: landscape) {
+body {
+color: blue;
+}
+}
+
+The points at which a media query is introduced are known as breakpoints.
+
+**Notes**
+Use '&' when referencing a class that exists in a grouped selector (ex: when .col-sm-half is defined alongside .col)
+Use '&' when applying modifiers or pseudo-classes
+
+button {
+background-color: black;
+color: white;
+
+&:hover {
+background-color: white;
+color: black;
+cursor: pointer;
+}
+}
