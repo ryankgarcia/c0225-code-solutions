@@ -1,17 +1,17 @@
 'use strict';
 const $lightOn = document.getElementById('yellow-circle');
-const $lightOnRow = document.getElementById('row-on');
-const $lightOnColumn = document.getElementById('column-full-on');
 const $lightOff = document.querySelector('.black-circle');
-const $lightOffRow = document.querySelector('.row-off');
-const $lightOffColumn = document.querySelector('.column-full-off');
+const $onView = document.querySelector('.view[data-view="on"]');
+const $offView = document.querySelector('.view[data-view="off"]');
 if (!$lightOn) throw new Error('$lightOn query failed');
-if (!$lightOnRow) throw new Error('$lightOnRow query failed');
-if (!$lightOnColumn) throw new Error('$lightOnColumn query failed');
 if (!$lightOff) throw new Error('$lightOff query failed');
-if (!$lightOffRow) throw new Error('$lightOffRow query failed');
-if (!$lightOffColumn) throw new Error('$lightOffColumn query failed');
-$lightOn.addEventListener('click', (event) => {
-  const $eventTarget = event.target;
-  console.log('event target:', $eventTarget);
+if (!$onView) throw new Error('$onView query failed');
+if (!$offView) throw new Error('$offView query failed');
+$lightOn.addEventListener('click', () => {
+  $onView.classList.add('hidden');
+  $offView.classList.remove('hidden');
+});
+$lightOff.addEventListener('click', () => {
+  $offView.classList.add('hidden');
+  $onView.classList.remove('hidden');
 });
