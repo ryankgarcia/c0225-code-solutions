@@ -1,9 +1,18 @@
-// import { evenNumbers, toDollars, divideBy, multiplyBy } from './numbers';
+import { evenNumbers, toDollars } from './numbers';
 
-// // 'it' is a synonym for test
+describe('evenNumbers', () => {
+  it('returns the even numbers', () => {
+    const numbers = [0, 1, 4, 5, 10, 20];
+    const result = evenNumbers(numbers);
+    expect(result).toEqual([0, 4, 10, 20]);
+  });
+});
 
-// describe('evenNumbers()', () => {
-//   it('return the even numbers', () => {
-//     const result = evenNumbers([1, 4, 5, 10, 0]);
-//   });
-// });
+describe('toDollars', () => {
+  it('returns amount in dollars', () => {
+    const amount = 1;
+    const result = toDollars(amount);
+    // left off getting this line in the unit test to pass
+    expect(result).toEqual(amount.toFixed(2));
+  });
+});

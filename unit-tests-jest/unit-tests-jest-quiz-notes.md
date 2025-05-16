@@ -10,7 +10,7 @@ unit tests are a function that allows us to test how our code is functioning and
 
 - Why is it important to write unit tests?
 
-unit tests are important because they test our codes functionality and allow us as developers to be able to refactor our code and check to see if it is still doing what we want it to do, allowing us to write the best code possible. to verify if our code is working correctly
+unit tests are important because they test our codes functionality and allow us as developers to be able to refactor our code and check to see if it is still doing what we want it to do, allowing us to write the best code possible and to verify if our code is working correctly
 
 - What code should be tested with a unit test? What code is not well suited for unit tests?
 
