@@ -5,16 +5,12 @@ export function evenNumbers(numbers: number[]): number[] {
   return numbers.filter((n) => n % 2 === 0);
 }
 
-console.log('even number[]', evenNumbers([1, 2, 3, 4, 5, 6]));
-
 /**
  * Returns a number formatted in dollars and cents.
  */
 export function toDollars(amount: number): string {
   return `$${amount.toFixed(2)}`;
 }
-
-console.log('toDollars', toDollars(1));
 
 /**
  * Returns a new array of numbers where every entry has been divided by the
