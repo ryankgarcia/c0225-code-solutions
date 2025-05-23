@@ -1,10 +1,8 @@
 export function titleCase(str: string): string {
-  for (let i = 0; i < str.length; i++) {
-    if (str[0]) {
-      str[0].toUpperCase();
-    } else {
-      str[i].toLowerCase();
-    }
+  const strings = str.toLocaleLowerCase().split(' ');
+
+  for (let i = 0; i < strings.length; i++) {
+    strings[i] = strings[i][0].toLocaleUpperCase() + strings[i].slice(1);
   }
-  return str;
+  return strings.join(' ');
 }
