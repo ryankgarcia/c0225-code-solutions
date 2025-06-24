@@ -1,7 +1,18 @@
-export function Popup() {
+import './Popup.css';
+
+type Props = {
+  isPopupOpen: boolean;
+  setIsPopupOpen: (open: boolean) => void;
+};
+
+export function Popup({ isPopupOpen, setIsPopupOpen }: Props) {
+  if (!isPopupOpen) return null;
   return (
     <div>
-      <ul>
+      <ul
+        style={{ listStyleType: 'none' }}
+        className="shaded-border"
+        onClick={() => setIsPopupOpen(false)}>
         <li>Dog</li>
         <li>Cat</li>
         <li>Giraffe</li>

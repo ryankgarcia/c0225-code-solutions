@@ -1,11 +1,22 @@
+import { useState } from 'react';
 import { Popup } from './Popup';
 import './App.css';
 
 function App() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  function togglePopup() {
+    setIsPopupOpen((prev) => !prev);
+  }
+
   return (
     <>
-      <button>Pop up!</button>
-      <Popup />
+      <button onClick={togglePopup}>
+        {isPopupOpen ? 'Close Popup' : 'Open Popup'}
+      </button>
+      {isPopupOpen && (
+        <Popup isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen} />
+      )}
     </>
   );
 }
