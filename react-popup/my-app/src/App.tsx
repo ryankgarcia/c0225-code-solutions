@@ -27,10 +27,21 @@ function App() {
       {isPopupOpen && (
         <Popup
           isPopupOpen={isPopupOpen}
-          setIsPopupOpen={setIsPopupOpen}
           positionTo={buttonRef.current}
-          onClose={() => setIsPopupOpen(false)}
-        />
+          onClose={() => setIsPopupOpen(false)}>
+          <div>
+            <ul style={{ listStyleType: 'none' }} className="shaded-border">
+              <li>Dog</li>
+              <li>Cat</li>
+              <li>Giraffe</li>
+              <li>Goat</li>
+              <li>Duck</li>
+              <li>Monkey</li>
+              <li>Bull</li>
+              <li>Pig</li>
+            </ul>
+          </div>
+        </Popup>
       )}
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

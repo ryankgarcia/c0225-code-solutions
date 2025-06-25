@@ -1,23 +1,20 @@
 import { createPortal } from 'react-dom';
 import './Popup.css';
+import type { ReactNode } from 'react';
 
 type Props = {
   isPopupOpen: boolean;
-  setIsPopupOpen: (open: boolean) => void;
   positionTo?: HTMLElement | null;
   onClose?: () => void;
+  children: ReactNode;
 };
 
-export function Popup({
-  isPopupOpen,
-  setIsPopupOpen,
-  positionTo,
-  onClose,
-}: Props) {
+export function Popup({ isPopupOpen, positionTo, onClose, children }: Props) {
   if (!isPopupOpen) return null;
 
   let top = '50%';
   let left = '50%';
+  const position = 'absolute';
 
   if (positionTo) {
     const rect = positionTo.getBoundingClientRect();
@@ -26,6 +23,7 @@ export function Popup({
   }
   return createPortal(
     <>
+      <div style={{ top, left, position, zIndex: 1000 }}>{children}</div>
       <div
         onClick={onClose}
         style={{
@@ -38,25 +36,7 @@ export function Popup({
           opacity: '.5',
           zIndex: 999,
           pointerEvents: 'auto',
-        }}>
-        <div style={{ position: 'absolute', top, left, zIndex: 1000 }}>
-          <div>
-            <ul
-              style={{ listStyleType: 'none' }}
-              className="shaded-border"
-              onClick={() => setIsPopupOpen(false)}>
-              <li>Dog</li>
-              <li>Cat</li>
-              <li>Giraffe</li>
-              <li>Goat</li>
-              <li>Duck</li>
-              <li>Monkey</li>
-              <li>Bull</li>
-              <li>Pig</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        }}></div>
     </>,
     document.body
   );
