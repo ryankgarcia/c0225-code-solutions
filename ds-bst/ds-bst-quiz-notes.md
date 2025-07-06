@@ -31,3 +31,11 @@ Its time complexity is a logarithmic
 What is the difference between Infinity vs. -Infinity?
 
 In a binary search tree, you don't modify values. You would remove it then insert the new item as a child.
+
+In a BST, each node can have at most two children (which means binary).
+
+The nodes are ordered such that every element in the left subtree of ANY given node must be LESS THAN the current node.
+
+Every element in the right subtree of a given node must be greater than the current node.
+
+The binary search algorithm is recursive, and the recursive algorithm works by eliminating half of the remaining values from consideration on each step.
