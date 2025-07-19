@@ -39,3 +39,12 @@ The nodes are ordered such that every element in the left subtree of ANY given n
 Every element in the right subtree of a given node must be greater than the current node.
 
 The binary search algorithm is recursive, and the recursive algorithm works by eliminating half of the remaining values from consideration on each step.
+
+Recursive => means the function calls itself.
+
+The recursive algorithm works by eliminating half of the remaining values from consideration on each step.
+This means the order of magnitude of this is O(log N). Since logarithms grow very slowly, the binary search algorithm is extremely fast.
+
+Another advantage of BST is that the elements can be easily retrieved in sorted order. While Lists and Hash tables can be accessed in constant time, they do not maintain their items in sorted order, so they are not appropriate for many algorithms that require sorting.
+
+A recursive algorithm will run forever unless it has a termination condition, that is, the algorithm must guarantee that at some point the function does not call itself.
