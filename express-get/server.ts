@@ -12,13 +12,16 @@ const db = new pg.Pool({
 
 const app = express();
 
+// two routes, both GET requests
+
+// GET '/api/countries'
 app.get('/api/countries', async (req, res, next) => {
   try {
     const sql = `
-    select "countryId" ,"countries"."name", count(*) as "cities"
-    from "countries"
-    join "cities" using ("countryId")
-    group by "countryId";
+   select "countryId", "countries"."name", count(*) as "cities"
+   from "countries"
+   join "cities" using ("countryId")
+   group by "countryId"
     `;
     const result = await db.query(sql);
     res.json(result.rows);
@@ -27,22 +30,23 @@ app.get('/api/countries', async (req, res, next) => {
   }
 });
 
+// GET '/api/cities/:cityId'
 app.get('/api/cities/:cityId', async (req, res, next) => {
   try {
     const { cityId } = req.params;
     if (!Number(cityId)) {
-      throw new ClientError(400, 'cityId must be a positive number');
+      throw new ClientError(400, 'cityId must be a positive integer');
     }
     const sql = `
     select "cities".*, "countries"."name" as "country"
     from "countries"
     join "cities" using ("countryId")
-    where "cityId" = $1;
+    where "cityId" = $1
     `;
     const result = await db.query(sql, [cityId]);
     const city = result.rows[0];
     if (!city) {
-      throw new ClientError(404, `city ${city} not found`);
+      throw new ClientError(404, `city ${cityId} not found`);
     }
     res.json(city);
   } catch (err) {
