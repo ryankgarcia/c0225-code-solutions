@@ -15,7 +15,9 @@ const app = express();
 app.use(errorMiddleware);
 app.use(express.json());
 
-// GET = READ in CRUD
+// CRUD operations for the server. Create = post, Read = get, update = put, delete = delete
+
+// Read
 app.get('/api/actors/:actorId', async (req, res, next) => {
   try {
     const { actorId } = req.params;
@@ -23,20 +25,24 @@ app.get('/api/actors/:actorId', async (req, res, next) => {
       throw new ClientError(400, `Non-integer actorId: ${actorId}`);
     }
     const sql = `
-      select * from "actors"
-      where "actorId" = $1;
+    select *
+    from "actors"
+    where "actorId" = $1
     `;
-    const params = [actorId];
-    const result = await db.query(sql, params);
+    const result = await db.query(sql, [actorId]);
     const actor = result.rows[0];
-    if (!actor) throw new ClientError(404, `actor ${actorId} not found`);
+    if (!actor) {
+      throw new ClientError(404, `actor ${actorId} not found`);
+    }
     res.json(actor);
   } catch (err) {
     next(err);
   }
 });
 
-// POST = Create in CRUD
+// Create. Insert "firstName" and "lastName", into actors table which should be provided by as JSON in the request body
+// return the newly-created object as JSON with status 201. you can chain the status to .json()
+
 app.post('/api/actors', async (req, res, next) => {
   try {
     const { firstName, lastName } = req.body;
@@ -45,7 +51,7 @@ app.post('/api/actors', async (req, res, next) => {
     }
     const sql = `
     insert into "actors" ("firstName","lastName")
-    values ($1 ,$2)
+    values ($1, $2)
     returning *;
     `;
     const result = await db.query(sql, [firstName, lastName]);
@@ -56,27 +62,27 @@ app.post('/api/actors', async (req, res, next) => {
   }
 });
 
-// PUT = UPDATE in CRUD
+// Update. add a route at '/api/actors/:actorId' by updating an actor in the actors table
+// update "firstName" and "lastName" which should be provided as JSON in the request body
+// return newly create object as JSON with status 200. remember to do returning * in SQL statement.
+
 app.put('/api/actors/:actorId', async (req, res, next) => {
   try {
     const { actorId } = req.params;
     if (!Number(+actorId)) {
-      throw new ClientError(400, 'actorId must be a positive integer');
+      throw new ClientError(400, `actorId must be a positive integer`);
     }
     const { firstName, lastName } = req.body;
     if (!firstName || !lastName) {
-      throw new ClientError(
-        400,
-        'invalid input: firstName and lastName required'
-      );
+      throw new ClientError(400, 'firstName and lastName required');
     }
     const sql = `
-  update "actors"
-  set "firstName" = $2,
+    update "actors"
+    set "firstName" = $2,
         "lastName" = $3
     where "actorId" = $1
     returning *;
-  `;
+    `;
     const result = await db.query(sql, [actorId, firstName, lastName]);
     const actor = result.rows[0];
     if (!actor) {
@@ -88,12 +94,14 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
   }
 });
 
-// DELETE = DELETE in CRUD
+// Delete. Add a route '/api/actors/:actorId' by deleting an actor in the "actors" table
+// return a 204 if successful
+
 app.delete('/api/actors/:actorId', async (req, res, next) => {
   try {
     const { actorId } = req.params;
     if (!Number(+actorId)) {
-      throw new ClientError(400, 'actorId must be a positive integer');
+      throw new ClientError(400, `actorId must be a positive integer`);
     }
     const sql = `
     delete
